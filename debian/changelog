@@ -1,5 +1,229 @@
-template-repository (1.0-1) unstable; urgency=medium
+pivy (0.6.10-2) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * Source only upload to rebuild against soqt.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Anton Gladky <gladk@debian.org>  Tue, 01 Apr 2025 20:06:53 +0200
+
+pivy (0.6.10-1) unstable; urgency=medium
+
+  * Team upload.
+  * [24296d3] New upstream version 0.6.10
+  * [42cdc1f] Set Standards-Version to 4.7.0
+
+ -- Anton Gladky <gladk@debian.org>  Mon, 31 Mar 2025 06:57:04 +0200
+
+pivy (0.6.9~a0-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * [77e466d] Set upstream metadata fields: Bug-Database, Bug-Submit, Repository-Browse.
+  * [b258293] Update standards version to 4.6.1, no changes needed.
+
+  [ Kurt Kremitzki ]
+  * [aecd01a] New upstream version 0.6.9~a0 (Closes: #1055697)
+
+ -- Kurt Kremitzki <kkremitzki@debian.org>  Sun, 14 Jan 2024 23:26:18 -0600
+
+pivy (0.6.8-1) unstable; urgency=medium
+
+  [ Georges Khaznadar ]
+  * integrated properly Adrian Bunk's entry in debian/changelog about
+    release 0.6.7-0.1
+  * bumped debhelper-compat's version back to 13
+  * added a file debian/salsa-ci.yml to enable continuous integration
+
+  [ Kurt Kremitzki ]
+  * [0d14479] New upstream version 0.6.8
+  * [91f4814] Use my @d.o address for uploader
+
+ -- Kurt Kremitzki <kkremitzki@debian.org>  Thu, 03 Nov 2022 22:47:07 -0500
+
+pivy (0.6.7-0.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * New upstream release.
+    - Improved Python 3.10 compatibility. (Closes: #1009037)
+
+ -- Adrian Bunk <bunk@debian.org>  Wed, 11 May 2022 22:08:30 +0300
+
+pivy (0.6.6-1) unstable; urgency=medium
+
+  [ Ileana Dumitrescu ]
+  * Non-maintainer upload
+  * [c4162d7] New upstream version 0.6.6
+  * [9184ba1] Updated to dh version 13
+
+ -- Ileana Dumitrescu <ileanadumi95@protonmail.com>  Fri, 04 Mar 2022 16:12:08 +0200
+
+pivy (0.6.5-1) unstable; urgency=medium
+
+  * [2ac31f3] Remove upstreamed patches (all)
+  * [b62ef60] Update d/watch to new Github upstream
+  * [da6fa49] Update homepage
+  * [03ae26c] Add Rules-Requires-Root: no
+  * [0d19e64] New upstream version 0.6.5
+  * [5249b08] Don't hardcode Python version (Closes: #949970)
+
+ -- Kurt Kremitzki <kurt@kwk.systems>  Mon, 27 Jan 2020 20:37:31 -0600
+
+pivy (0.6.4-2) unstable; urgency=medium
+
+  * Team upload.
+  * [b68f72b] Drop Python 2 support (Closes: #937295)
+  * [a612bc1] Enable autopkgtest-pkg-python testsuite
+  * [0bb2697] d/copyright: Change Format URL to correct one
+  * [d22c3d7] Use debhelper-compat instead of debian/compat
+  * [ea65f6c] Bump standards version to 4.4.1
+  * [738d410] Bump debhelper compat level to 12
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 28 Oct 2019 10:18:43 +0100
+
+pivy (0.6.4-1) unstable; urgency=medium
+
+  * [89980e8] Correct alignment in d/control
+  * Upload to unstable
+
+ -- Kurt Kremitzki <kurt@kwk.systems>  Thu, 20 Dec 2018 11:15:00 -0600
+
+pivy (0.6.4-1~exp1) experimental; urgency=medium
+
+  [ Kurt Kremitzki ]
+  * [fd3e9ff] Update d/watch to Bitbucket upstream
+  * [1240704] New upstream version 0.6.4
+  * [e146f09] Update packaging for 0.6.4 & Python 3 build
+  * [32f691c] Update coin/soqt deps  (Closes: #915371)
+  * [928033b] Update python3 build version
+  * [1e62848] Use new setup.py
+  * [bb4d9b1] Use multiarch cmake prefix path
+  * [3ee4cb2] Add fakeheaders
+  * [8af0d83] Add py37 patch
+
+  [ Leopold Palomo-Avellaneda ]
+  * [082b614] Added patch to fix CMake Vars
+  * [6444c2c][a3f8ccd] Added patch to make a workaround for Includes in swig
+  * [b1cb822] Activating the patches
+  * [e408ffc][52eb28e][3796801]
+            Added cmake and qt5 correct build dependencies.
+    	      Added QT_SELECT=qt5 to built against Qt5 (Closes: #875099)
+  * [fb3f5a9] Bump Standards to 4.2.1. No changes
+  * [3a0b6ea] Added description to a patch
+
+  [ Anton Gladky ]
+  * [0496ce5] Fix typo in d/changelog
+  * [2d065b0] Drop debian/source/options
+
+ -- Kurt Kremitzki <kurt@kwk.systems>  Sat, 15 Dec 2018 13:51:48 -0600
+
+pivy (0.5.0~v609hg-4) unstable; urgency=medium
+
+  * Team upload.
+  * [11add23] Apply cme fix dpkg-control.
+  * [e35ff4a] Set Standards-Version to 4.1.3
+  * [e6ac823] Set compat-level 11
+  * [e66f6a7] Update VCS-fields to salsa
+  * [05d3949] Use Priority optional instead of extra
+  * [d7da3e2] Remove myself from uploaders
+
+ -- Anton Gladky <gladk@debian.org>  Fri, 29 Dec 2017 20:17:34 +0100
+
+pivy (0.5.0~v609hg-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Remove long useless debian/pycompat file.
+  * Build-Depend on dh-python instead of python-support.  Closes:
+    #786149
+  * use X-Python-Version control field instead of the debian/pyversions
+    file.
+  * debian/control: bump Standards-Version to 3.9.6, no changes needed.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Mon, 14 Dec 2015 01:10:04 +0000
+
+pivy (0.5.0~v609hg-3) unstable; urgency=low
+
+  * [ffc321b] Update/fix VCS-fields.
+  * [6a8ffda] Use dh 9. Clean debian/rules.
+  * [06471e5] Remove README.source.
+  * [a9eec4e] Add --parallel option.
+  * [e1c6b3f] Add myself as uploader.
+
+ -- Anton Gladky <gladk@debian.org>  Sat, 06 Jul 2013 23:33:11 +0200
+
+pivy (0.5.0~v609hg-2) unstable; urgency=low
+
+  * Build-dep on libcoin80-dev and latest libsoqt4-dev.
+  * Change maintainer to Debian Science Maintainers,
+    add Teemu Ikonen to Uploaders.
+  * Upgrade to standards-version 3.9.4.
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Thu, 30 May 2013 12:59:43 +0200
+
+pivy (0.5.0~v609hg-1) unstable; urgency=low
+
+  * New snapshot from upstream mercurial repository
+  * New upstream version fixes pivy.gui.soqt import (closes: #583323)
+  * Change versioning scheme to follow hg revisions
+  * 'Fix' watch file (it finds only ancient pivy versions)
+  * copyright: Update years, change to current DEP5 format
+  * Add debian/source/format file with text "3.0 (quilt)"
+  * Add debian/source/options file
+    - Use bz2 with maximum compression
+    - Generate a single debian-changes patch
+  * control:
+    - Update standards-version to 3.9.2
+    - Add Vcs-* fields
+  * rules:
+    - Add build-arch and build-indep targets to please lintian
+    - Add get-orig-source target to fetch source from upstream hg repo
+  * QuarterWidget.py: Replace string exception with an IOError
+    (closes: #585313)
+  * Building with swig 2.0.4-4 fixes FTBS (closes: #639077)
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Wed, 21 Sep 2011 14:31:38 +0200
+
+pivy (0.5.0~svn765-2) unstable; urgency=low
+
+  * control:
+      Add dependency to python-qt4-gl to binary package.
+      Mention quarter in the description.
+  * copyright: remove scons files, update copyright holder name
+    from Systems in Motion to Kongsberg SIM
+  * Upload to unstable (closes: #504617)
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Sat, 19 Sep 2009 23:09:28 +0200
+
+pivy (0.5.0~svn765-1) unstable; urgency=low
+
+  * New upstream SVN snapshot
+  * Use a svn revision in the version number, in stead of date
+  * control: Update to standards-version 3.8.3
+  * rules: Remove call to dh_clean -k, add call to dh_prep
+  * Add a README.source file explaining how to recreate the orig.tar
+    from upstream SVN
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Fri, 11 Sep 2009 23:54:48 +0200
+
+pivy (0.5.0~svn2009.06.18-1) UNRELEASED; urgency=low
+
+  * New upstream version
+  * control:
+    - Remove build-dep from cdbs
+    - Update libsoqt4-dev versioned build-dep to the version in unstable.
+  * rules:
+    - Let 'dh clean' run the setup.py clean target
+  * copyright: Update
+  * Upload to unstable (closes: #504617)
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Sat, 01 Aug 2009 15:34:07 +0200
+
+pivy (0.5.0~svn2008.12.11-1) UNRELEASED; urgency=low
+
+  * New upstream version from SVN snapshots
+  * rules: use pure debhelper instead of CDBS
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Sat, 13 Dec 2008 13:03:45 +0100
+
+pivy (0.3.0-1) UNRELEASED; urgency=low
+
+  * Initial packaging
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Thu, 13 Nov 2008 15:31:51 +0100

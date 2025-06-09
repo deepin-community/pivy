@@ -1,4 +1,30 @@
 #!/usr/bin/make -f
 
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
+export PYBUILD_NAME=pivy
+export PYBUILD_SYSTEM=distutils
+export PYBUILD_INTERPRETERS=python{version} python{version}-dbg
+export PYBUILD_DISABLE=test
+export PYBUILD_BEFORE_BUILD=find {dir} -name soqt_wrap.cpp -delete; find {dir} -name coin_wrap.cpp -delete
+export PYBUILD_BEFORE_INSTALL=find {dir} -name soqt_wrap.cpp -delete; find {dir} -name coin_wrap.cpp -delete
+export CMAKE_PREFIX_PATH=/usr/lib/${DEB_HOST_MULTIARCH}/cmake
+export QT_SELECT=qt5
+
 %:
-	dh $@
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_configure:
+	cd fake_headers && touch cstddef cstdarg cassert
+	dh_auto_configure
+
+override_dh_installexamples:
+	# Don't install non-working examples
+	find -name Sc21Viewer.py -delete
+	find -name 06.3.Complex3DText_not_working.py -delete
+	dh_installexamples
+
+override_dh_missing-arch:
+	dh_missing --fail-missing
